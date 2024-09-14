@@ -1554,6 +1554,6 @@ int Sipeed_OV2640::sensor_snapshot( )
     return 0;
 }
 
-int Sipeed_OV2640::flip( bool horiz, bool vert ) {
-	return ov2640_set_flip(horiz, vert);
+void Sipeed_OV2640::flip( bool horiz, bool vert ) {
+	ov2640_set_flip(horiz, vert);
 }

@@ -53,7 +53,7 @@ class Camera{
 public:
     Camera(framesize_t frameSize, pixformat_t pixFormat);
     Camera(int16_t width, uint16_t height, pixformat_t pixFormat);
-    ~Camera();
+    virtual ~Camera();
     virtual bool begin( ) = 0;
     virtual void end() = 0;
     // virtual bool reset() = 0;
@@ -78,7 +78,7 @@ public:
     virtual uint8_t* getRGB888(){ return nullptr; };
     virtual void setRotation(uint8_t rotation) = 0;
     virtual void setInvert(bool invert) = 0;
-    virtual void flip(bool horiz, bool vert);
+    virtual void flip(bool horiz, bool vert) = 0;
 
 
     virtual int width(){ return _width; }

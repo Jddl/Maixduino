@@ -56,7 +56,7 @@ public:
     virtual uint8_t* getRGB888(){ return _aiBuffer; };
     virtual void setRotation(uint8_t rotation);
     virtual void setInvert(bool invert);
-    void flip(bool horiz, bool vert);
+    virtual void flip(bool horiz, bool vert);
 
 
 private:
