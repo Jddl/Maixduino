@@ -281,3 +281,8 @@ void lcd_ram_cpyimg(char *lcd, int lcdw, char *img, int imgw, int imgh, int x, i
     }
     return;
 }
+
+void lcd_invert_display(bool invert)
+{
+    tft_write_command(invert ? INVERSION_DISPALY_ON : INVERSION_DISPALY_OFF);
+}

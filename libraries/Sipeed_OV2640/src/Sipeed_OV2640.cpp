@@ -677,8 +677,8 @@ bool Sipeed_OV2640::reset()
 
 bool Sipeed_OV2640::setPixFormat(pixformat_t pixFormat)
 {
-    if(ov2640_set_pixformat(pixFormat) != 0)
-        return false;
+    // if(ov2640_set_pixformat(pixFormat) != 0)
+    //     return false;
     return true;
 }
 
@@ -1529,9 +1529,9 @@ int Sipeed_OV2640::reverse_u32pixel(uint32_t* addr,uint32_t length)
   uint32_t* pend = addr+length;
   for(;addr<pend;addr++)
   {
-	  data = *(addr);
-	  *(addr) = ((data & 0x000000FF) << 24) | ((data & 0x0000FF00) << 8) | 
-                ((data & 0x00FF0000) >> 8) | ((data & 0xFF000000) >> 24) ;
+	   data = *(addr);
+       *(addr) = ((data & 0x000000FF) << 24) | ((data & 0x0000FF00) << 8) |
+                 ((data & 0x00FF0000) >> 8) | ((data & 0xFF000000) >> 24);
   }  //1.7ms
   
   

@@ -76,6 +76,7 @@ public:
 
     void drawImage(uint16_t x1, uint16_t y1, uint16_t width, uint16_t height, uint16_t* img);
 
+    void setInvert(boolean invert);
 private:
     SPIClass& _spi;
     int8_t    _dcxPin;
